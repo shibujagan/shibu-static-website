@@ -60,9 +60,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.html" class="hvr-underline-from-center active">Home</a></li>
-							<li><a href="#about" class="hvr-underline-from-center scroll">About</a></li>
-							<li><a href="#services" class="hvr-underline-from-center scroll">Services</a></li>
-							<li><a href="#works" class="hvr-underline-from-center scroll">Work</a></li>
+							<li><a href="#about" class="hvr-underline-from-center scroll">About Me</a></li>
+							<li><a href="#services" class="hvr-underline-from-center scroll">Brith</a></li>
+							<li><a href="#works" class="hvr-underline-from-center scroll">Interest</a></li>
 							<li><a href="#contact" class="hvr-underline-from-center scroll">Contact Us</a></li>
 						</ul>
 					</div>
@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="banner-text-w3layouts">
 				<h3>Hi, I'm</h3>
 				<h2>Shibu j</h2>
-				<a href="#">Download CV</a>
+				<a href="#"></a>
 			</div>
 		</div>
 
@@ -103,15 +103,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><span>Date of birth</span>: 6th Dec 2004</li>
 								<li><span>Language</span>: English, Malayalam, Tamil</li>
 								<li><span>Expert in</span>: Web development</li>
-								<li><span>Phone</span>: +91 7025940188</li>
+								
 								<li><span>Email</span>: <a href="email:example@mail.com">shibujp2004@gmail.com</a></li>
 								<li><span>Address</span>: palakkad,kerala</li>
 								
 							</ul>
-							<div class="pos-grid-agileinfo">
-								<img src="shibu.jpg" class="img-responsive" alt="">
-								<h5>About Me</h5>
-							</div>
+							
 						</div>
 					</div>
 
@@ -135,13 +132,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</div>
 							<div class="mid-bar-agileits-w3layouts">
-								<h6>cyber security<span>50% </span></h6>
+								<h6>Git<span>90% </span></h6>
 								<div class="progress">
 									<div class="progress-bar progress-bar-striped active" style="width: 70%">
 									</div>
 								</div>
 							</div>
-							<h6>Jquery<span>75% </span></h6>
+							<h6>Node js<span>75% </span></h6>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped active" style="width: 75%">
 								</div>
@@ -368,7 +365,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="contact-form">
 				<h4 class="title-top-w3">Get in touch<span>|</span></h4>
 				<h5 class="title-main-w3ls">Contact Me</h5>
-				<form action="#" method="post">
+				<form id="submit-form" action="" >
 					<div class="col-md-6 styled-input-w3-agile">
 						<input type="text" name="Full Name" placeholder="Enter your name" required="">
 					</div>
@@ -473,6 +470,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="js/bootstrap.js"></script>
 	<!-- //for bootstrap working -->
 	<!-- // Scripts -->
+	<script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxtPb2f2GfQGbOJW4mXK61Q5dLjDdXlpD-6kcPEUJafJwMu0dqYzPEkNEJOlxeoCXQOnA/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
